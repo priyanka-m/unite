@@ -1,5 +1,5 @@
 <?php
-class plugins_util{
+class Plugins_Util{
 	private static $dbconnection=false;
 	function plugins_util(){
 	}
