@@ -6,26 +6,18 @@ class Plugins_Util{
 	}
 	public static function connect_OC_DB(){
 		$connect=OC_DB::connect();
-		/*if($connect){
-			$dbconnetion=true;
-			return true;
-		}
-		else{
-			return false;
-		}*/
-		
 	}
 	
 	public static function construct_unite_tables(){
-			$query="create table unite
+		$query="create table unite
 			(oc_username varchar(20),
 			 service_name varchar(20),
 			 service_user varchar(20),
-			 resource varchar(50),
+			 resource varchar(100),
 			 sync numeric(2),
 			 fetch_at time,
 			 cron_pattern varchar(5)
-		 )";
+		    )";
 		 $prepared=OC_DB::prepare($query);
 		 $execute=$prepared->execute();
 		 if($execute){
@@ -51,12 +43,6 @@ class Plugins_Util{
 		$query=("show tables like 'unite' ");
 		$exists=OC_DB::query($query);
 		return $exists;
-		/*if($exists){
-			return true;
-		}
-		else{
-			return false;
-		}*/
 	}
 	public static function OC_DB_insertid(){
 		OC_DB::insertid();
