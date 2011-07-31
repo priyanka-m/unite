@@ -33,6 +33,13 @@ class Plugins_Util{
 		$result=$query_prep->execute();
 		return $result;
 	}
+	
+	public static function query_and_fetchall($query){
+		$query_prep=OC_DB::prepare($query);
+		$result=$query_prep->execute()->fetchAll();
+		return $result;
+	}
+	
 	public static function disconnect_OC_DB(){
 		if(Plugins_Util::$dbconnection){
 			$dbconnection=OC_DB::disconnect;
