@@ -10,5 +10,5 @@
 <br/>
 <?php
 	/* Need a way to dynamically find all plugins loaded */
-	echo '<a href=plugins/plugin_loader.php?plugin=flickr>Flickr</a>';
+	echo '<a href=../unite_flickr/index.php>Flickr</a>';
 ?>

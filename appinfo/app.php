@@ -1,21 +1,10 @@
 <?php
 
-	OC_APP::register( array( 
-		'order' => 10, 
-		'id' => 'unite', 
-		'name' => 'Unite' ));
-		
-	OC_APP::addNavigationEntry( array( 
-		'id' => 'unite_index', 
-		'order' => 10, 
-		'href' => OC_HELPER::linkTo( 'unite', 'index.php' ), 
-		'icon' => OC_HELPER::imagePath( 'unite', 'icon.png' ), 
-		'name' => 'Unite' ));
+$l=new OC_L10N('unite');
 
-	OC_APP::addSettingsPage( array( 
-		'id' => 'unite_settings', 
-		'order' => 10, 
-		'href' => OC_HELPER::linkTo( 'unite', 'settings.php' ), 
-		'name' => 'Unite', 
-		'icon' => OC_HELPER::imagePath( 'unite', 'icon.png' )));
+OC_Util::addScript('unite','loader');
+
+OC_App::register( array( 'order' => 4, 'id' => 'unite', 'name' => 'Unite' ));
+
+OC_App::addNavigationEntry( array( 'id' => 'unite_index', 'order' => 2, 'href' => OC_Helper::linkTo( 'unite', 'index.php' ), 'icon' => OC_Helper::imagePath( 'unite', 'icon.png' ), 'name' => $l->t('Unite') ));
 ?>
