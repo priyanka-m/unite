@@ -3,9 +3,9 @@
     Main page template
   */
 ?>
-
+<br/>
 <h1>Unite</h1>
-<hr/>
+
 <b>Plugins</b>
 <br/>
 <?php
