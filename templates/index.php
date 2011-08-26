@@ -6,9 +6,17 @@
 <br/>
 <h1>Unite</h1>
 
-<b>Plugins</b>
+<h2><b>Plugins</b></h2>
 <br/>
 <?php
-	/* Need a way to dynamically find all plugins loaded */
-	echo '<a href=../unite_flickr/index.php>Flickr</a>';
+	$apps=array();
+	$apps = OC_App::get();
+	
+	foreach($apps as $app) {
+		if(strpos($app[id],'unite_')===0) {
+           echo '<a href=../'.$app[id].'/index.php><b>'.$app[id].'</b></a>';
+           echo '<br/>';
+         }  
+	}
+	
 ?>
