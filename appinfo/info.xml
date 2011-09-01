@@ -1,10 +1,10 @@
-<?xml version="1.0"?>
+<?xml version="1.0"?> 
 <info>
 	<id>unite</id>
 	<name>Unite</name>
-	<description>An application for fetching user's data from closed services.</description>
-	<version>1.0</version>
+	<version>0.1</version>
 	<licence>AGPL</licence>
 	<author>Priyanka Menghani</author>
-	<require>2</require>
+	<require>1</require>
+	<description>An application that can be used to fetch user's data from closed services.</description>
 </info>
